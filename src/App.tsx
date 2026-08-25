@@ -229,7 +229,7 @@ function App() {
 
             </div>
 
-            {/* Social Links */}
+            {/* Social Links
             <div className="mt-9 flex items-center gap-6 text-sm text-gray-500">
 
               <a
@@ -257,7 +257,7 @@ function App() {
                 Email
               </a>
 
-            </div>
+            </div> */}
 
           </div>
 
