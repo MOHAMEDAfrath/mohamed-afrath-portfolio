@@ -135,12 +135,53 @@ function App() {
 
         <div className="absolute left-1/2 top-1/3 -z-10 h-80 w-80 -translate-x-1/2 rounded-full bg-blue-600/20 blur-[120px]" />
 
-        <div className="mx-auto grid w-full max-w-6xl items-center gap-16 md:grid-cols-2">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 py-16 md:grid md:grid-cols-[1.2fr_0.8fr] md:items-center md:gap-16 md:py-24">
 
-          {/* Hero Text */}
-          <div className="animate-fade-up">
+          {/* Profile Photo */}
+          <div className="order-1 flex animate-fade-up justify-center md:order-2">
+            <div className="relative">
 
-            <p className="mb-5 text-sm font-medium uppercase tracking-[0.3em] text-blue-400">
+              {/* Blue glow */}
+              <div className="absolute inset-0 scale-90 rounded-full bg-blue-500/20 blur-3xl" />
+
+              {/* Photo */}
+              <div className="relative rounded-full border border-blue-500/20 p-2 sm:p-3">
+                <div className="rounded-full border border-white/10 bg-[#111111] p-1.5 sm:p-2">
+
+                  <img
+                    src="/profile.jpg"
+                    alt="Mohamed Afrath"
+                    className="
+              h-52
+              w-52
+              animate-float
+              rounded-full
+              object-cover
+              sm:h-64
+              sm:w-64
+              md:h-80
+              md:w-80
+            "
+                  />
+
+                </div>
+              </div>
+
+              {/* Location */}
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-white/10 bg-[#111111] px-4 py-2 shadow-xl">
+                <p className="text-[11px] text-gray-300 sm:text-xs">
+                  📍 Dublin, Ireland
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+
+          {/* Hero Content */}
+          <div className="order-2 animate-fade-up md:order-1">
+
+            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.35em] text-blue-400">
               Software Developer
             </p>
 
@@ -154,96 +195,70 @@ function App() {
               solutions<span className="text-blue-500">.</span>
             </h1>
 
-            <h2 className="mt-6 text-2xl font-semibold text-gray-300">
-              C# · .NET · ASP.NET Core · Angular · AI/GenAI
-            </h2>
-
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-400">
-              Software Developer with 3+ years of professional experience
-              building backend and full-stack applications using C#, .NET,
-              ASP.NET Core, SQL Server and Angular.
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-400">
+              I'm Mohamed Afrath, a Software Developer specialising in
+              backend and full-stack development with C#, .NET,
+              ASP.NET Core, Angular and SQL Server.
             </p>
 
-            <p className="mt-5 max-w-2xl leading-7 text-gray-500">
-              MSc in Computing (Artificial Intelligence) graduate from Dublin
-              City University, with a strong interest in Generative AI,
-              intelligent systems and modern software development.
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-gray-500">
+              With an MSc in Computing (Artificial Intelligence) from
+              Dublin City University, I also build intelligent
+              applications using NLP, transformers, LLMs and
+              Generative AI.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            {/* Buttons */}
+            <div className="mt-9 flex flex-wrap gap-4">
 
               <a
                 href="#projects"
-                className="rounded-full bg-white px-6 py-3 font-medium text-black transition hover:bg-gray-200"
+                className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
               >
-                View Projects →
+                Explore My Work →
               </a>
 
               <a
-                href="/Afrath-CV.pdf"
+                href="/Mohamed-Afrath-CV.pdf"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-white/20 px-6 py-3 font-medium transition hover:border-white/50 hover:bg-white/5"
+                className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/5"
               >
                 Download CV ↓
               </a>
 
             </div>
 
-            <div className="mt-10 flex gap-6 text-sm text-gray-400">
+            {/* Social Links */}
+            <div className="mt-9 flex items-center gap-6 text-sm text-gray-500">
 
               <a
-                href="https://github.com/"
+                href="YOUR_GITHUB_URL"
                 target="_blank"
-                rel="noreferrer"
-                className="hover:text-white"
+                rel="noopener noreferrer"
+                className="transition hover:text-white"
               >
                 GitHub ↗
               </a>
 
               <a
-                href="https://www.linkedin.com/"
+                href="YOUR_LINKEDIN_URL"
                 target="_blank"
-                rel="noreferrer"
-                className="hover:text-white"
+                rel="noopener noreferrer"
+                className="transition hover:text-white"
               >
                 LinkedIn ↗
               </a>
 
               <a
-                href="mailto:your-email@example.com"
-                className="hover:text-white"
+                href="mailto:YOUR_EMAIL@example.com"
+                className="transition hover:text-white"
               >
                 Email
               </a>
 
             </div>
 
-          </div>
-
-
-          {/* Profile */}
-          <div className="hidden animate-fade-up justify-center md:flex">
-            <div className="relative">
-              {/* Glow */}
-              <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-3xl" />
-
-              {/* Outer Ring */}
-              <div className="relative animate-float rounded-full border border-blue-500/30 p-3">
-                <img
-                  src="/profile.jpg"
-                  alt="Mohamed Afrath"
-                  className="h-80 w-80 rounded-full object-cover"
-                />
-              </div>
-
-              {/* Status Badge */}
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full border border-white/10 bg-[#111111] px-5 py-2 shadow-xl">
-                <p className="text-center text-xs text-gray-300">
-                  Dublin, Ireland
-                </p>
-              </div>
-            </div>
           </div>
 
         </div>
